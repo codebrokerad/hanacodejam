@@ -1,4 +1,4 @@
-_schema-version: '3.1'
+_schema-version: "3.1"
 ID: MyHANAApp
 version: 1.0.0
 description: "A simple CAP project."
@@ -30,6 +30,8 @@ modules:
     path: db
     parameters:
       buildpack: nodejs_buildpack
+    build-parameters:
+      ignore: ["default-env.json", ".env"]
     requires:
       - name: MyHANAApp-db
 
